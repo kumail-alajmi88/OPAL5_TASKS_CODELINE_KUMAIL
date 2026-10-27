@@ -1,0 +1,3 @@
+Kumail|4|Good
+Ali|3|Nothing
+Alajmi|5|very Good
