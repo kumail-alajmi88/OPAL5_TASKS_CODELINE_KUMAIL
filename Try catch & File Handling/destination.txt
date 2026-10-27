@@ -1,0 +1,14 @@
+This is a Java file handling task.
+This content will be copied.
+
+My name is Kumail AL-AJmi, fresh graduation from SQU with Bachelor Degree in Cyber Security and Computing Infrastructure. .
+I am learning Java programming.
+This program demonstrates file handling in Java.
+It uses BufferedReader to read data from a text file.
+It uses BufferedWriter to write data into another text file.
+Try-catch is used to handle exceptions and errors.
+The program displays a success message when the file is copied.
+If an error occurs, an appropriate error message is displayed.
+
+
+Thank you!
