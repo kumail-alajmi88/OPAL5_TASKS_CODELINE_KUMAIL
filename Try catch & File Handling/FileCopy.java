@@ -1,47 +1,25 @@
-
 import java.io.*;
 
 public class FileCopy {
-
-    static BufferedReader br;
-    static BufferedWriter bw;
-
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) {
         try {
-            br = new BufferedReader(new FileReader("source.txt"));
-            bw = new BufferedWriter(new FileWriter("destination.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("source.txt"));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("destination.txt"));
 
-            Read();
+            String line;
 
-            System.out.println("File copied successfully!");
+            while ((line = br.readLine()) != null) {
+                bw.write(line);
+                bw.newLine();
+            }
+
+            System.out.println("File copied successfuy!");
+
+            br.close();
+            bw.close();
 
         } catch (IOException e) {
-            System.out.println("Error copying file: " + e.getMessage());
-
-        } finally {
-            if (br != null) {
-                br.close();
-            }
-
-            if (bw != null) {
-                bw.close();
-            }
+            System.out.println("Error copying file: " + e);
         }
-    }
-
-
-    private static void Read() throws IOException {
-        String line;
-
-        while ((line = br.readLine()) != null) {
-            Write(line);
-        }
-    }
-
-
-    private static void Write(String line) throws IOException {
-        bw.write(line);
-        bw.newLine();
     }
 }
